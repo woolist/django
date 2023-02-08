@@ -45,9 +45,10 @@ class Post(models.Model):
     # tags = models.ManyToManyField(Tag, blank=True)
 
     def __str__(self):        
-        return f'[{self.pk}]{self.title}' # pk는 자동으로 생성되는 번호
+        return f'[{self.pk}]{self.title}'  # 포스트의 제목이 나오도록 함
+        # pk는 각 레코드에 대한 고유값으로 자동으로 생성되는 번호
 
-    def get_absolute_url(self):
+    def get_absolute_url(self): # 객체의 상세 페이지로 이동할 수 있는 링크를 만들 수 있음, url 생성규칙을 정의하는 메서드
         return f'/blog/{self.pk}/' # url만들어줌 >> blog/1 , blog/2
 
 #     def get_file_name(self):
