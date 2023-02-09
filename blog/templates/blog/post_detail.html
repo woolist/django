@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{post.title}} - Blog</title>
-</head>
-<body>
-    <nav>
-        <a href="/blog/">Blog</a>
-    </nav>
+{% extends 'blog/base.html' %}
+{% block head_title %} {{post.title}} - Blog {% endblock %}
+{% block main_area %}
     <h1>{{post.title}}</h1>
     <h4>{{post.created_at}}</h4>
     <p>{{post.content}}</p>
     <hr>
-
-</body>
-</html>
+{% endblock %}

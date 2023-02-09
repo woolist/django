@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'blog/base.html' %}
+{% block main_area %}
     <h1>Blog</h1>
+    <a href=http://127.0.0.1:8000>home</a>    
     {% for p in post_list %}
     <hr>
     <h2><a href='{{p.get_absolute_url}}'>{{p.title}}</a></h2>
     <h4>{{p.created_at}}</h4>
     <p>{{p.content}}</p>
     {% endfor %}
-</body>
-</html>
+{% endblock %}
