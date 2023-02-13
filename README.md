@@ -48,3 +48,8 @@ urlpatterns = [
     path('', include('homepage.urls')),
     <!-- path가 '주소+ ' 이면 hompage 의 urls.py -->
 ]
+
+### tag, search, login(allauth) 기능 0213
+tag : 多 대 多 
+### admin말고 webpage에서 포스트 생성,수정 기능 02/13
+
